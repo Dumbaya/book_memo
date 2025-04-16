@@ -1,0 +1,123 @@
+#main_div {
+	margin-top: 100px;
+  perspective: 2000px;
+}
+
+#main_book_wrapper {
+  width: fit-content;
+  margin: auto;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+#book {
+  width: 600px;
+  height: 700px;
+  position: relative;
+  perspective: 3000px;
+}
+
+#book.animate {
+  transform: scale(1.2) translateY(50px);
+  transition: transform 0.8s ease;
+  transform-origin: center center;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  transform-origin: left center;
+  z-index: 2;
+}
+
+.book-cover.open {
+  transform: rotateY(-150deg);
+}
+
+.book-cover-front,
+.book-cover-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.book-cover-front {
+  background: linear-gradient(135deg, #c4bc73b7, #c4c16fb7);
+  z-index: 2;
+}
+
+.book-cover-back {
+  background: rgba(207, 198, 147, 0.555);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+#book_page {
+  width: 100%;
+  height: 100%;
+  background: rgba(207, 198, 147, 0.555);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #333;
+  z-index: 1;
+}
+
+.cover_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 60px 30px;
+  box-sizing: border-box;
+}
+
+#main_book_text {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.bookmark {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#mark_1 { top: -60px; left: 10px; background: #f55;}
+#mark_2 { top: -60px; left: 70px; background: rgb(224, 169, 67);}
+#mark_3 { top: -60px; left: 130px; background: rgb(230, 233, 64);}
+#mark_4 { top: -60px; left: 190px; background: rgb(140, 230, 39);}
+#mark_5 { top: -60px; left: 260px; background: rgb(47, 66, 240);}
+#mark_6 { top: -60px; left: 320px; background: rgba(36, 29, 92, 0.425);}
+#mark_7 { top: -60px; left: 380px; background: rgb(152, 32, 156);}
+#mark_8 { top: -60px; left: 440px; background: rgba(189, 197, 115, 0.336);}
+
+#plus_btn {
+	width: 70px;
+	height: 60px;
+  top: 50px;
+  left: 800px;
+	background-color: white;
+	border: none;
+	position: absolute;
+}
+#plus_img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
